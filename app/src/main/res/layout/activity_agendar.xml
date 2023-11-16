@@ -48,7 +48,7 @@
         android:backgroundTint="#FFFFFF"
         android:popupBackground="@color/white"
         android:text="Seleccione Barbero"
-        android:textColor="#FFFFFF" />
+        android:textColor="#000000" />
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -82,36 +82,52 @@
             android:textSize="24sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="480dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
 
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="307dp"
-        android:layout_height="63dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:amPmTextColor="#040404"
-        android:animateLayoutChanges="true"
-        android:background="#FFFDFD"
-        android:numbersTextColor="#000000"
-        android:rotationX="5"
-        android:timePickerMode="spinner" />
+        <Button
+            android:id="@+id/timePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="10dp"
+            android:text="Seleccionar Hora" />
 
-    <TextView
-        android:id="@+id/selectedTimeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:text="Hora seleccionada: "
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/selectedTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="sans-serif-light"
+            android:text=" 00:00"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="24sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
     <Button
         android:id="@+id/botonAgendar"
         android:layout_width="197dp"
         android:layout_height="64dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:onClick="IrAgendar"
-        android:text="Agendar Hora>" />
+        android:layout_marginTop="20dp"
+        android:onClick="BotonAgendar"
+        android:text="Agendar Hora" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="210dp"
+        android:layout_height="11dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
 
 </LinearLayout>
 

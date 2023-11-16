@@ -11,13 +11,6 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/btnAtrasLogin"
-        android:layout_width="106dp"
-        android:layout_height="wrap_content"
-        android:text="Volver"
-        android:textAlignment="center"
-        android:onClick="IrLogin"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="16dp"
                 android:text="Registrarse"
                 android:textColor="#FFFFFF"
@@ -48,7 +41,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:hint="Correo"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColor="#FFFFFF" />
 
             <EditText
                 android:id="@+id/TextNombre"
@@ -57,6 +51,7 @@
                 android:layout_marginTop="20dp"
                 android:hint="Nombre"
                 android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
                 android:textSize="19sp"
                 android:visibility="visible"
                 tools:visibility="visible" />
@@ -67,7 +62,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:hint="Apellido"
-                android:inputType="textPersonName" />/>
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF" />/>
 
             <EditText
                 android:id="@+id/TextNumero"
@@ -75,7 +71,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:hint="Número"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:textColor="#FFFFFF" />
 
 
             <EditText
@@ -84,15 +81,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:hint="Contraseña"
-                android:inputType="textEmailAddress" />
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/registrarButton"
                 android:layout_width="130dp"
                 android:layout_height="67dp"
                 android:layout_marginTop="30dp"
-                android:text="Registrar"
-                android:onClick="Registrar"/>
+                android:onClick="Registrar"
+                android:text="Registrar" />
+            <Button
+                android:id="@+id/btnAtrasLogin"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:text="Volver"
+                android:textAlignment="center"
+                android:onClick="IrLogin"
+                android:layout_marginTop="30dp"/>
 
         </LinearLayout>
     </ScrollView>

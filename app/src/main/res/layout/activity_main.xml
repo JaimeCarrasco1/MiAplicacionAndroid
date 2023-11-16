@@ -16,15 +16,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-30dp"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="20dp"
         android:text="Quality BarberShop"
         android:textColor="#FFFDFD"
-        android:textSize="34sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/titulo"
+        android:id="@+id/NombreUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -39,12 +39,12 @@
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:text="Nuestros Servicios"
         android:textAlignment="center"
         android:textColor="#7B54C1"
-        android:textSize="34sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -104,12 +104,13 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
             android:contentDescription="Botón de Imagen 2"
+            android:text="Delineado Cejas"
             android:src="@drawable/logo"
             android:textAlignment="center"
             android:textColor="@color/design_default_color_background"
             android:textSize="24sp"
             android:textStyle="bold"
-            tools:text="Delineado Cejas" />
+            />
 
 
     </LinearLayout>
@@ -166,28 +167,38 @@
         <TextView
             android:id="@+id/Texto4"
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
             android:contentDescription="Botón de Imagen 2"
             android:src="@drawable/logo"
+            android:text="Tintura"
             android:textAlignment="center"
             android:textColor="@color/design_default_color_background"
             android:textSize="24sp"
-            android:textStyle="bold"
-            tools:text="Tintura" />
+            android:textStyle="bold" />
 
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/botonAgendar"
+        android:id="@+id/BtnUbicanos"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
+        android:onClick="AbrirMapa"
+        android:text="Ubicanos GPS" />
+
+    <Button
+        android:id="@+id/botonAgendar"
+        android:layout_width="181dp"
+        android:layout_height="52dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
         android:onClick="IrAgendar"
         android:text="Agendar >" />
+
 
 </LinearLayout>
 

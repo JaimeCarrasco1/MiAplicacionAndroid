@@ -27,27 +27,7 @@ DaoUsuario dao;
 
         dao=new DaoUsuario(this);
     }
-/*
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.registrarButton:
-                Usuario u = new Usuario();
-                u.setCorreo(cor.getText().toString());
-                u.setNombre(nom.getText().toString());
-                u.setApellido(ape.getText().toString());
-                u.setNumero(num.getText().toString());
-                u.setContrasenia(pas.getText().toString());
-                if (!u.isNull()) {
-                    Toast.makeText(this, "ERROR: Campos vacios", Toast.LENGTH_LONG).show();
-                } else if (dao.insertUsuario(u)) {
-                    Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_LONG).show();
-                }else{
-                    Toast.makeText(this, "Usuario ya Registrado", Toast.LENGTH_LONG).show();
-                }
-        }
-    }
-*/
+
 
     public void Registrar(View view){
         Usuario u = new Usuario();

@@ -3,6 +3,8 @@ package com.santotomas.myaplicacion2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +15,7 @@ import java.util.Calendar;
 import android.widget.TextView;
 import android.widget.AdapterView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 
 public class Agendar extends AppCompatActivity {
@@ -38,7 +41,7 @@ public class Agendar extends AppCompatActivity {
             @Override
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
                 // Actualiza el TextView con la hora seleccionada
-                selectedTimeTextView.setText("Hora seleccionada: " + hourOfDay + ":" + minute);
+                selectedTimeTextView.setText(hourOfDay + ":" + minute);
             }
         });
 
@@ -94,5 +97,42 @@ public class Agendar extends AppCompatActivity {
 
             }
         });
+        // Configura un listener para el botón "timePickerButton"
+        Button timePickerButton = findViewById(R.id.timePickerButton);
+        timePickerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showTimePickerDialog();
+            }
+        });
+    }
+    private void showTimePickerDialog() {
+        final Calendar calendar = Calendar.getInstance();
+        int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
+
+        // Crear un diálogo de selección de tiempo en modo de reloj
+        TimePickerDialog timePickerDialog = new TimePickerDialog(
+                this,
+                new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        // Actualizar el TextView con la hora seleccionada
+                        selectedTimeTextView.setText(hourOfDay + ":" + minute);
+                    }
+                },
+                hourOfDay,
+                minute,
+                true // true para el formato de 24 horas, false para el formato de 12 horas
+        );
+
+        // Mostrar el diálogo de selección de tiempo
+        timePickerDialog.show();
+    }
+
+    public void BotonAgendar (View view){
+        Toast.makeText(this, "Agendado con exito", Toast.LENGTH_LONG).show();
+        Intent i = new Intent(this, Agendar.class);
+        startActivity(i);
     }
 }

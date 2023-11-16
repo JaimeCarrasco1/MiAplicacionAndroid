@@ -44,7 +44,7 @@
         android:backgroundTint="#673AB7"
         android:backgroundTintMode="src_in"
         android:ems="10"
-        android:hint="Email"
+        android:hint="Correo"
         android:inputType="text"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
