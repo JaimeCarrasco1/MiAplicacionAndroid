@@ -25,6 +25,8 @@ DaoUsuario dao;
         btnLogin=(Button) findViewById(R.id.button);
         dao= new DaoUsuario(this);
 
+        Intent serviceIntent = new Intent(this, ProximityService.class);
+        startService(serviceIntent);
 
     }
 
